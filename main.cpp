@@ -368,6 +368,7 @@ void OrdenamientoDeSecuencia()
 					temp=listadoNuevo.listado[i].secuencia.listadoDinamico[var2];
 					listadoNuevo.listado[i].secuencia.listadoDinamico[var2] = listadoNuevo.listado[i].secuencia.listadoDinamico[var2+1];
 					listadoNuevo.listado[i].secuencia.listadoDinamico[var2+1] = temp;
+					listadoNuevo.ActualizarDistancia();//Actualizamos el valor de la distancia
 				}
 			}
 		}
