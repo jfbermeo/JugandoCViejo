@@ -130,7 +130,7 @@ public:
     //    std::cout<<"\t"<<listado[posicion].CodigoProve;
         std::cout<<"\t" <<listado[posicion].carga;
         std::cout<<"\t" <<listado[posicion].espacio;
-        std::cout<< "\t" <<listado[posicion].distancia;
+        std::cout<< "\t" <<listado[posicion].calcularDistanciaSecuencia();//listado[posicion].distancia;
         std::cout<< "\t" <<listado[posicion].Num_Clientes;
         //std::cout<< "\t" <<listado[posicion].ex1;
         //std::cout<< "\t" <<listado[posicion].ex2;
