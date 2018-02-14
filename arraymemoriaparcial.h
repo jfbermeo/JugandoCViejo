@@ -20,7 +20,8 @@ public:
     int calcularDistanciaSecuencia()
     {
 
-        int suma = calcularDistancia(0,secuencia.listadoDinamico[0]); // es la suma inicial que hay entre el 0, y el primer numero de la secuencia
+        int suma = 0;
+        //int suma = calcularDistancia(0,secuencia.listadoDinamico[0]); // es la suma inicial que hay entre el 0, y el primer numero de la secuencia
         //std::cout<<"distancia Inicial " << secuencia.listadoDinamico[0] << " " << suma<< "\n";
 
         for(int i=0;i<Num_Clientes-1;i++)
@@ -32,6 +33,7 @@ public:
             //std::cout<<"suma"<<n1<<" " <<n2<< " " << calcularDistancia(n1,n2);
             suma = suma + calcularDistancia(n1,n2);
         }
+        suma+= calcularDistancia(secuencia.listadoDinamico[Num_Clientes-1],0)//se suma la distancia del ultimo nodo del listado, al nodo 0
 
         return suma;
     }
@@ -130,7 +132,7 @@ public:
     //    std::cout<<"\t"<<listado[posicion].CodigoProve;
         std::cout<<"\t" <<listado[posicion].carga;
         std::cout<<"\t" <<listado[posicion].espacio;
-        std::cout<< "\t" <<listado[posicion].calcularDistanciaSecuencia();//listado[posicion].distancia;
+        std::cout<< "\t" <<listado[posicion].distancia;
         std::cout<< "\t" <<listado[posicion].Num_Clientes;
         //std::cout<< "\t" <<listado[posicion].ex1;
         //std::cout<< "\t" <<listado[posicion].ex2;
